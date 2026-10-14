@@ -14,8 +14,7 @@
 ## <img src="https://img.shields.io/badge/-2ea44f?style=flat-square&logo=aboutdotme&logoColor=white" height="20" /> 关于我
 
 - <img src="https://img.shields.io/badge/-4285F4?style=flat-square&logo=googlescholar&logoColor=white" height="16" /> 专注于 **Web / 移动端反爬对抗**、**浏览器指纹与签名参数逆向**、**JS 虚拟机保护与补环境** 方向
-- <img src="https://img.shields.io/badge/-2088FF?style=flat-square&logo=githubactions&logoColor=white" height="16" /> 擅长把零散的逆向经验 **沉淀为可复用的自动化流水线**，用 AI Agent 替代重复的人工分析
-- <img src="https://img.shields.io/badge/-34A853?style=flat-square&logo=android&logoColor=white" height="16" /> 涉猎 **Chromium 内核改造**、**Android 内核 / eBPF 动态插桩**
+- <img src="https://img.shields.io/badge/-34A853?style=flat-square&logo=android&logoColor=white" height="16" /> 涉猎 **Chromium 内核改造**、**Linux 内核 / eBPF 动态插桩**
 - <img src="https://img.shields.io/badge/-3776AB?style=flat-square&logo=python&logoColor=white" height="16" /> 主力语言：**Python · Go · Rust · TypeScript**，兼顾前端与 Cloudflare Workers 边缘部署
 
 ---
@@ -77,10 +76,33 @@
 
 **项目成果**
 
-| 维度 | 成果 |
-| :--- | :--- |
-| <img src="https://img.shields.io/badge/-FF6F61?style=flat-square&logo=rocket&logoColor=white" height="16" /> **极速交付** | 5 天内完成原型验证与方法论沉淀；在头部社交图文平台的实战验证中，仅耗时 **2 小时**即全自动化还原其端到端签名机制 |
+| 维度                                                                                                                      | 成果                                                                                                             |
+| :------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
+| <img src="https://img.shields.io/badge/-FF6F61?style=flat-square&logo=rocket&logoColor=white" height="16" /> **极速交付** | 5 天内完成原型验证与方法论沉淀；在头部社交图文平台的实战验证中，仅耗时 **2 小时**即全自动化还原其端到端签名机制  |
 | <img src="https://img.shields.io/badge/-10b981?style=flat-square&logo=target&logoColor=white" height="16" /> **高通用性** | 先后成功覆盖校园认证系统、复杂前端签名校验系统及头部互联网平台核心风控参数，验证了该方案的**高通用度与可复现性** |
+
+---
+
+### <img src="https://img.shields.io/badge/-4285F4?style=flat-square&logo=tencentqq&logoColor=white" height="20" /> 腾讯天御滑块
+
+> `2026-10` ～ `2026-10` · **核心研发**
+
+**技术栈：** `AI Agent` · `cv2 图像定位`
+
+**流程**
+
+- **环境构建**：依托前述浏览器框架的环境日志追踪能力，采集混淆脚本的运行期接口访问记录；AI Agent 依据记录按模板补齐 Node 环境。环境覆盖 navigator、screen、document、storage、canvas、webgl 与 CSS 样式共七类接口。
+- **拼图块识别**：拼图块为背景图片的提亮素材，三通道亮度增益一致，数值区间 1.9 至 2.2。定位分两阶段：归一化相关确定候选区域，亮度增强匹配完成精修。纵向坐标采用服务端下发的初始化位置参数，检测值作为校验依据。定位误差 0 像素。
+- **PoW 求解**：题目形式为求解数字 n，满足 `md5(前缀 + n)` 等于给定值。Node 枚举求解，耗时 1 秒内。
+
+**项目成果**
+
+封装 Node 黑盒接口：输入拼图图片与位置参数，输出验证凭据 ticket 与 randstr。
+
+**后续优化**
+
+- PoW 求解改用 C 或 Rust 实现，压缩单次耗时。
+- 图像识别引入亚像素定位或并行匹配，提升识别性能。
 
 ---
 
